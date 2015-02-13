@@ -1,95 +1,135 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Welcome to my homepage by bearshng</title>
+---
+layout: master
+title: Home
+description: Home Page for Jekyll Metro Theme
+---
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<div class="container">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="without-description">
-        <h1>Welcome to my homepage <a href="./file/cv.pdf" style="float:right">CV</a></h1> 
-      </header>
-      <section>
-        <h3>
-<p><img src="./images/pic.png" style="width:130px;height:130px ;float:left; margin-right:30px" />Ph.D candidate in Computer Science and Technology.<a href="http://www.cs.zju.edu.cn/"> College of Computer Science</a>, <a href="http://www.zju.edu.cn/">Zhejiang University</a></p>
+	<header class="row">
+	  <div class="col-sm-6 col-md-12" style="margin-top:25px;margin-bottom:25px">
+	    <h1 id="pin">{{site.title}}</h1>
+	  </div>
+	</header>
+	<nav>
+		<div class="row" style="margin-top:25px">
+ 			<div class="col-md-4 col-sm-6 col-xs-12">
+				<a href="about/">
+					<div class="tile purple profile bord">
+						<h2 class="title">About Me</h2>
+						<p>Hello World, I am {{site.author}}.</p>
+					</div>
+				</a>
+		    </div>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="resume/" title="Resume" class="tile red bord icon-resume"></a>
+			</div>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<div class="live-tile" data-mode="flip" data-delay="4000">
+					<div>
+						<a href="blog/" title="Blog" class="tile orange bord icon-blog"></a>
+					</div>
+					<div>
+						<a href="blog/" title="Blog" class="tile orange bord font-fix">
+						<p>Blog Section:</p>
+							<ol>
+								<li>Posts</li>
+								<li>News</li>
+							</ol>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<p>Caoguangbiao main building Room 424 ,Computing Intelligence Lab,Hangzhou, 310027, P.R.China</p>
+		<div class="row">
 
-<p><a href="mailto:fcxiong@zju.edu.cn">fcxiong@zju.edu.cn</a> &amp;<a href="mailto:bearshng@gmail.com">bearshng@gmail.com</a></p>
-</br>
-<h1>
-<a id="education-research-interests-publicationsskills-tools" class="anchor" href="#education-research-interests-publicationsskills-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>[<a href="#Education">Education</a>] [<a href="#Research">Research Interests</a>] [<a href="#Publications">Publications</a>][<a href="#Skills">Skills</a>] [<a href="#Tools">Tools</a>]</h1>
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				{% for post in site.posts offset:1 limit:1 %}
+				<a href="{{post.url}}">
+					<div class="tile green bord">
+						<h3 class="title">Recent Article</h3>
+						<h4 class="title">{{ post.title }}</h4>
+						<p> {{ post.content | strip_html | truncatewords: 10 }}</p>
+					</div>
+				</a>
+				{% endfor %}
+			</div>
 
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				{% for post in site.posts limit:1 %}
+				<a href="{{post.url}}">
+					<div class="tile red bord">
+						<h3 class="title">Latest Article</h3>
+						<h4 class="title">{{ post.title }}</h4>
+						<p> {{ post.content | strip_html | truncatewords: 10 }}</p>
+					</div>
+				</a>
+				{% endfor %}
+			</div>
 
-<h1>
-<a id="education" class="anchor"  aria-hidden="true" name="Education"><span class="octicon octicon-link"></span>Education</a></h1>
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				{% for post in site.posts %}
+					{% if post.featured == true %}
+					<a href="{{post.url}}">
+						<div class="tile orange bord">
+							<h3 class="title">Featured Article</h3>
+							<h4 class="title">{{ post.title }}</h4>
+							<p> {{ post.content | strip_html | truncatewords: 10 }}</p>
+						</div>
+					</a>
+					{% break %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
 
-<p>2014.09- Ph.D candidate in Computer Science and Technology.<a href="http://www.cs.zju.edu.cn/">College of Computer Science</a>, <a href="http://www.zju.edu.cn/">Zhejiang University</a> .Supervisor:Prof.<a href="http://www.cs.zju.edu.cn/people/qianyt/qianyt.htm">Yuntao Qian</a></p>
+		<div class="row" style="margin-bottom:25px">
+			<div data-delay="2000" data-mode="flip" class="live-tile flip ha fix-3">
+			<div class="col-md-2 col-sm-3 col-xs-6 flip-front ha" style="transform: rotateX(180deg); transition: all 500ms ease 0s;">
+				<a class="tile blue bord lk-ico" href="https://ae.linkedin.com/in/olakara/"></a>
+			</div>
 
-<p>2010.09 --2014.07 B. E. in <a href="http://www.sc.sdu.edu.cn/default.do"> School of Software</a>, <a href="http://www.sdu.edu.cn/"> Shandong University</a>. Supervisor:Prof <a href="http://mla.sdu.edu.cn/ygp.html"> Gongping Yang</a> &amp;Prof <a href="http://ir.sdu.edu.cn/%7Ejunma/%7Ejunma_en.htm">Jun Ma</a></p>
+			<div class="col-md-2 col-sm-3 col-xs-6 flip-back ha" style="transform: rotateX(360deg); transition: all 500ms ease 0s;">
+				<a class="tile blue bord tw-ico" href="https://twitter.com/olakara"></a>
+			</div>
+		</div>
 
-<p>2011.09--2012.07 Exchange Student in <a href="http://iss.whu.edu.cn/">School of International Software</a>,<a href="http://www.whu.edu.cn/">Wuhan University</a>.</p>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="{{site.twitter}}"  class="tile blue bord tw-ico"></a>
+			</div>
 
-<h1>
-<a id="research-interests" class="anchor"  aria-hidden="true" name="Research"><span class="octicon octicon-link"></span>Research Interests</a></h1>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="{{site.facebook}}" class="tile blue bord fk-ico"></a>
+			</div>
 
-<p>Machine Learning ,Image Processing and Data Mining , Hyperspectral image processing,Tensor decomposition and its applications.</p>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="feed.xml/" class="tile purple bord rs-ico"></a>
+			</div>
 
-<h1>
-<a id="publications" class="anchor"  aria-hidden="true" name="Publications"><span class="octicon octicon-link"></span>Publications</a></h1>
-<p>To be added</p>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="{{site.gplus}}" class="tile orange bord gl-ico"></a>
+			</div>
 
-<h1>
-<a id="skills" class="anchor"  aria-hidden="true" name="Skills"><span class="octicon octicon-link"></span>Skills</a></h1>
-
-<p><ul>
-<li>Proficient:Matlab,Java,JSP</li>
-<li> Familiar:C,C++,Python,Latex,Linux</li>
-<li>Math:Advanced Mathematics,Linear Algerbra,Probabilty,Statistics</li>
-<li> Languages: English:Fair ; Chinese: Native</li>
-   </ul>
- </p>
-
-<h1>
-<a id="tools" class="anchor"  aria-hidden="true" name="Tools"><span class="octicon octicon-link"></span>Tools</a></h1>
-
-<p>Latex template for Shandong University.(<a href="https://github.com/bearshng/code/tree/master/SDUDesignLatex">code</a>)</p>
-<p>Object Recongnition Using Bag of Words.(<a href="https://github.com/bearshng/code/tree/master/object%20Recongnition">code</a>)</p>
-<h1>
-<a id="friends" class="anchor"  aria-hidden="true" name="Friends"><span class="octicon octicon-link"></span>Friends</a></h1>
-
-<ul>
-<li>Bo Wu PhD candidate at   Tsinghua University    (Computer Network)</li>
-<li>Feilin Han PhD candidate at   Zhejiang University (Digital Media Technology) </li>
-<li>Jialu Fang PhD candidate at   Zhejiang University  (Machine Learning and Image processing)</li>
-<li>Lei Chu PhD candidate at Hongkong University    (CAD&amp;CG)</li>
-<li>Mi Zhang PhD candidate  at   Hong Kong University of Science and Technology</li>
-<li>Minchao Ye PhD candidate at Zhejiang University    (Machine Learning and Image processing)</li>
-<li>QI Liu PhD candidate  at National University of Singapore    (DataBase and Data Mining)</li>
-<li>Tongtong Wang PhD candidate at   Zhejiang University (CAD&amp;CG)</li>
-<li>Wenjia Meng PhD candidate at   Zhejiang University</li>
-<li>Zhijian Luo PhD candidate at Zhejiang University    (Machine Learning and Image processing)</li>
-<li>......
-</li>
-</ul>
-<h3>(If you are interested in me or want to cooperate  with me, please don't hesitate to drop me at <a href="mailto:fcxiong@zju.edu.cn">fcxiong@zju.edu.cn</a> or <a href="mailto:bearshng@gmail.com">bearshng@gmail.com</a></h3>
-      </section>
-    </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/bearshng">bearshng</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
-</html>
+			<!-- Mini tile -->
+			<div class="col-md-2 col-sm-3 col-xs-6 rside">
+				<div class="row">
+					<div style="padding-left:0px" class="col-md-6 col-sm-6 col-xs-6">
+					    <a href="{{site.linkedin}}" class="mtile blue bord lk-ico-sm"></a>
+					</div>
+					<div style="padding-left:0px" class="col-md-6 col-sm-6 col-xs-6">
+						<a href="{{site.twitter}}"  class="mtile blue bord tw-ico-sm"></a>
+					</div>
+				</div>
+				<div class="row">
+					<div  class="col-md-6 col-sm-6 col-xs-6 rep-1">
+						<a href="{{site.facebook}}" class="mtile purple bord fk-ico-sm"></a>
+					</div>
+					<div  class="col-md-6 col-sm-6 col-xs-6 rep-2">
+						<a href="{{site.gplus}}" class="mtile orange bord gl-ico-sm"></a>
+					</div>
+				</div>
+			</div> <!-- End of Mini tile -->
+		</div>
+	</nav>
+</div>

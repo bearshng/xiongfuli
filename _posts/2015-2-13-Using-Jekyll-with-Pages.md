@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Using Jekyll w ith Pages
-date:   2014-06-24 23:28:58
+date:   2014-08-20 23:28:58
 categories: design markdown
 tags: Design Markdown
 ---

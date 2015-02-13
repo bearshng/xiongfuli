@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  Using Jekyll with Pages
-date:   2014-08-20 23:28:58
+date:   2015-2-13 23:28:58
 categories: design markdown
 tags: Design Markdown
 ---
+In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog-aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers some other advanced templating features.
 
 ##An h1 header##
 

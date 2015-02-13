@@ -15,20 +15,20 @@ baseurl:          ''
 
 # Navigation
 navigation:
-- text: About
+- text: 关于
   url: /about/
-- text: Resume
+- text: 简历
   url: /resume/cv.pdf
-- text: Blog
+- text: 博客
   url: /blog/
-- text: Tags
+- text: 标签
   url: /tags/
-- text: Archive
+- text: 归档
   url : /archive/
 
 # Author Details
 author:         'Fengchao Xiong'
-linkedin:       'https://ae.linkedin.com/in/olakara/'
+linkedin:       'https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile'
 twitter:        'https://twitter.com/olakara'
 facebook:       'https://www.facebook.com/olakara'
 gplus:          'https://plus.google.com/u/0/+FengchaoXiong'

@@ -18,7 +18,7 @@ navigation:
 - text: About
   url: /about/
 - text: Resume
-  url: /resume/
+  url: /resume/cv.pdf
 - text: Blog
   url: /blog/
 - text: Tags
@@ -27,11 +27,11 @@ navigation:
   url : /archive/
 
 # Author Details
-author:         'Abdel Raoof Olakara'
+author:         'Fengchao Xiong'
 linkedin:       'https://ae.linkedin.com/in/olakara/'
 twitter:        'https://twitter.com/olakara'
 facebook:       'https://www.facebook.com/olakara'
-gplus:          'https://plus.google.com/100425464897246255887/'
+gplus:          'https://plus.google.com/u/0/+FengchaoXiong'
 
 # Google Analytics
 gahandler: 'UA-52149651-1'

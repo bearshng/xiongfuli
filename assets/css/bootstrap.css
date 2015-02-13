@@ -458,8 +458,12 @@ h6,
 .h6 {
   font-size: 13px;
 }
-p {
-  margin: 0 0 10.5px;
+p ,li {
+
+ margin: 0 0 10.5px;
+font-size: 14pt;
+font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+	line-height: 2;
 }
 .lead {
   margin-bottom: 21px;

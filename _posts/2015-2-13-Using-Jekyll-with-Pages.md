@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Using Jekyll w ith Pages
+title:  Using Jekyll with Pages
 date:   2014-08-20 23:28:58
 categories: design markdown
 tags: Design Markdown
 ---
 
-An h1 header
-============
+##An h1 header##
+
 
 Paragraphs are separated by a blank line.
 

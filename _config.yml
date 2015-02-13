@@ -7,7 +7,7 @@ highlighter: pygments
 permalink:        /blog/:year/:month/:day/:title
 
 # Setup
-title:            '熊凤超的个人博客'
+title:            'Welcome to my homepage'
 tagline:          'A Metro theme for Jekyll'
 description:      'A Sample blog using Jekyll Metro'
 url:              'http://localhost:4000'

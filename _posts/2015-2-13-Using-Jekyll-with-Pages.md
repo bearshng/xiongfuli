@@ -13,8 +13,10 @@ Using Jekyll
 ------------
 
 Every GitHub Page is run through Jekyll when you push content to a specially named branch within your repository. For User Pages, use the `master` branch in your username.github.io repository. For Project Pages, use the gh-pages branch in your project's repository. Because a normal HTML site is also a valid Jekyll site, you don't have to do anything special to keep your standard HTML files unchanged. Jekyll has thorough documentation that covers its features and usage. Simply start committing Jekyll formatted files and you'll be using Jekyll in no time.
+
 Installing Jekyll
 ------------
+
 We highly recommend installing Jekyll on your computer to preview your site and help diagnose troubled builds before publishing your site on GitHub Pages.
 
 Luckily, installing Jekyll on your computer, and ensuring your computer most closely matches the GitHub Pages settings is easy, thanks to the GitHub Pages Gem and our dependency versions page. To install Jekyll, you'll need a few things:

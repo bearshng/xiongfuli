@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Another sample markdown
+title:  Using Jekyll w ith Pages
 date:   2014-06-24 23:28:58
 categories: design markdown
 tags: Design Markdown

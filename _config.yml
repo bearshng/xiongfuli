@@ -15,15 +15,15 @@ baseurl:          ''
 
 # Navigation
 navigation:
-- text: 关于
+- text: about
   url: /about/
-- text: 简历
+- text: resume
   url: /resume/cv.pdf
-- text: 博客
+- text: blog
   url: /blog/
-- text: 标签
+- text: tags
   url: /tags/
-- text: 归档
+- text: archive
   url : /archive/
 
 # Author Details

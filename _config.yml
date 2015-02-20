@@ -15,15 +15,15 @@ baseurl:          ''
 
 # Navigation
 navigation:
-- text: about
+- text: About
   url: /about/
-- text: resume
+- text: Resume
   url: /resume/cv.pdf
-- text: blog
+- text: Blog
   url: /blog/
-- text: tags
+- text: Tags
   url: /tags/
-- text: archive
+- text: Archive
   url : /archive/
 
 # Author Details

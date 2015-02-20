@@ -15,9 +15,9 @@ I want to build a object classifier ,for my final project in [Computer Vison](ht
 Many methods are available.Among these methods , feature learning ＋ similar matching / classification is the most famous.For feature learning.I follow a very simple technique named Bag of words.
 The method is simple:
 
-1. **Extract features** of choice from training set that contains all classes.
-2. **Create a vocabulary** of features by clustering the features (kNN, etc). Let's say 500 features long.
-3. **Train your classifiers** (SVMs, Naive-Bayes, boosting, etc) on training set again (preferably a different one), this time check the features in the image for their closest clusters in the vocabulary. Create a histogram of responses for each image to words in the vocabulary, it will be a 1000-entries long vector. Create a sample-label dataset for the training.
+1. **```Extract features```** of choice from training set that contains all classes.
+2. **```Create a vocabulary```** of features by clustering the features (kNN, etc). Let's say 500 features long.
+3. **```Train your classifiers```** (SVMs, Naive-Bayes, boosting, etc) on training set again (preferably a different one), this time check the features in the image for their closest clusters in the vocabulary. Create a histogram of responses for each image to words in the vocabulary, it will be a 1000-entries long vector. Create a sample-label dataset for the training.
 4. When you get an image you havn't seen - run the classifier and it should, god willing, give you the right class.
 
 ## Extract Features ##

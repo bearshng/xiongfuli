@@ -437,10 +437,12 @@ h6 .small,
 h1,
 .h1 {
   font-size: 39px;
+  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 }
 h2,
 .h2 {
   font-size: 32px;
+  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 }
 h3,
 .h3 {

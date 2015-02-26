@@ -433,6 +433,7 @@ h5 .small,
 h6 .small,
 .h6 .small {
   font-size: 75%;
+ font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 }
 h1,
 .h1 {
@@ -447,18 +448,22 @@ h2,
 h3,
 .h3 {
   font-size: 26px;
+   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 }
 h4,
 .h4 {
   font-size: 19px;
+   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 }
 h5,
 .h5 {
   font-size: 15px;
+   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 }
 h6,
 .h6 {
   font-size: 13px;
+   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 }
 p ,li{
 

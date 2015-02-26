@@ -5,11 +5,12 @@ description: About Me page of Me
 theme: purple
 ---
 
-Ph.D candidate in Computer Science and Technology. College of Computer Science, Zhejiang University
+<img src="/assets/images/pic.png" style="width:150px;height:200px;vertical-align:middle;float:left;margin-right:30px"> Ph.D candidate in Computer Science and Technology.<a href="http://www.cs.zju.edu.cn/">College of Computer Science</a>, <a href="http://www.zju.edu.cn/">Zhejiang University</a> 
 
 Caoguangbiao main building Room 424 ,Computing Intelligence Lab,Hangzhou, 310027, P.R.China
 
 <a href="mailto:fcxiong@zju.edu.cn">fcxiong@zju.edu.cn</a> &amp;<a href="mailto:bearshng@gmail.com">bearshng@gmail.com</a>
+<br/><br/><br/>
 <h3><a id="education-research-interests-publicationsskills-tools" class="anchor" href="#education-research-interests-publicationsskills-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>[<a href="#Education">Education</a>] [<a href="#Research">Research Interests</a>] [<a href="#Publications">Publications</a>][<a href="#Skills">Skills</a>] [<a href="#Tools">Tools</a>]</h3>
 
 <h3>
@@ -62,7 +63,7 @@ Caoguangbiao main building Room 424 ,Computing Intelligence Lab,Hangzhou, 310027
 <li>......
 </li>
 </ul>
-<h3>(If you are interested in me or want to cooperate  with me, please don't hesitate to drop me at <a href="mailto:fcxiong@zju.edu.cn">fcxiong@zju.edu.cn</a> or <a href="mailto:bearshng@gmail.com">bearshng@gmail.com</a></h3>
+<h3>(If you are interested in me or want to cooperate  with me, please don't hesitate to contact me at <a href="mailto:fcxiong@zju.edu.cn">fcxiong@zju.edu.cn</a> or <a href="mailto:bearshng@gmail.com">bearshng@gmail.com</a></h3>
 
 ### Comments:
 

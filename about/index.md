@@ -47,7 +47,7 @@ Caoguangbiao main building Room 424 ,Computing Intelligence Lab,Hangzhou, 310027
 <p>Latex template for Shandong University.(<a href="https://github.com/bearshng/code/tree/master/SDUDesignLatex">code</a>)</p>
 <p>Object Recongnition Using Bag of Words.(<a href="https://github.com/bearshng/code/tree/master/object%20Recongnition">code</a>)</p>
 <h3>
-<a id="friends" class="anchor"  aria-hidden="true" name="Friends"><span class="octicon octicon-link"></span>Friends</a></h3>
+<a id="friends" class="anchor"  aria-hidden="true" name="Friends"><span class="octicon octicon-link"></span>Phd Around me </a></h3>
 
 <ul>
 <li>Bo Wu PhD candidate at   Tsinghua University    (Computer Network)</li>

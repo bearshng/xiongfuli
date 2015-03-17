@@ -25,12 +25,13 @@ navigation:
   url: /tags/
 - text: Archive
   url : /archive/
-
+- text: Search
+  url: /search/
 # Author Details
 author:         'Fengchao Xiong'
-linkedin:       'https://www.linkedin.com/profile/view?id=224684037&trk=nav_responsive_tab_profile_pic'
-twitter:        'https://twitter.com/olakara'
-facebook:       'https://www.facebook.com/olakara'
+linkedin:       'http://cn.linkedin.com/in/fengchaoXiong'
+twitter:        'https://twitter.com/FengChaoXiong'
+facebook:       'https://www.facebook.com/fengchao.xiong'
 gplus:          'https://plus.google.com/u/0/+FengchaoXiong'
 
 # Google Analytics
@@ -43,15 +44,15 @@ footersvg: 'true'
 footer-links:
   dribbble: 
   email: bearshng@gmail.com
-  facebook: 
+  facebook: https://www.facebook.com/fengchao.xiong
   flickr: 
   github: bearshng
   instagram: 
-  linkedin: 
+  linkedin: http://cn.linkedin.com/in/fengchaoXiong
   pinterest: 
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  google: None
-  twitter: None
+  google: https://plus.google.com/u/0/+FengchaoXiong
+  twitter: https://twitter.com/FengChaoXiong
   stackoverflow: #users/4388898/peter-zhu # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
 # Disqus

@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  Opencv exceptions and solutions

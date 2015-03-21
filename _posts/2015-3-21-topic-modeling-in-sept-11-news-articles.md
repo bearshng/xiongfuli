@@ -12,7 +12,7 @@ This article is mainly about NMF and visualization topics .The original content 
 
 
 # TOPIC MODELING IN 9/11 NEWS ARTICLES #
-*This is a guest post by Dan Morris. The [interactive dashboard](http://djsensei.github.io/911 " interactive dashboard") and the [code](https://github.com/djsensei/AlwaysRemember "code ") are also available.*
+*This is a guest post by Dan Morris. The [interactive dashboard](http://djsensei.github.io/911 " interactive dashboard") and the [code](https://github.com/bearshng/AlwaysRemember "code ") are also available.*
 
 This post describes a project to visualize topics in news articles related to the September 11th attacks and their lasting effects and consequences. I describe my motivation, the technical details of my implementation, and my reflections on some of the results.
 ![](http://i.imgur.com/SXjccK8.png)

@@ -46,24 +46,8 @@ Caoguangbiao main building Room 424 ,Computing Intelligence Lab,Hangzhou, 310027
 
 <p>Latex template for Shandong University.(<a href="https://github.com/bearshng/code/tree/master/SDUDesignLatex">code</a>)</p>
 <p>Object Recongnition Using Bag of Words.(<a href="https://github.com/bearshng/code/tree/master/object%20Recongnition">code</a>)</p>
-<h3>
-<a id="friends" class="anchor"  aria-hidden="true" name="Friends"><span class="octicon octicon-link"></span>Phd Around me </a></h3>
 
-<ul>
-<li>Bo Wu PhD candidate at   Tsinghua University    (Computer Network)</li>
-<li>Feilin Han PhD candidate at   Zhejiang University (Digital Media Technology) </li>
-<li>Jialu Fang PhD candidate at   Zhejiang University  (Machine Learning and Image processing)</li>
-<li>Lei Chu PhD candidate at Hongkong University    (CAD&amp;CG)</li>
-<li>Mi Zhang PhD candidate  at   Hong Kong University of Science and Technology</li>
-<li>Minchao Ye PhD candidate at Zhejiang University    (Machine Learning and Image processing)</li>
-<li>QI Liu PhD candidate  at National University of Singapore    (DataBase and Data Mining)</li>
-<li>Tongtong Wang PhD candidate at   Zhejiang University (CAD&amp;CG)</li>
-<li>Wenjia Meng PhD candidate at   Zhejiang University</li>
-<li>Zhijian Luo PhD candidate at Zhejiang University    (Machine Learning and Image processing)</li>
-<li>......
-</li>
-</ul>
-<h3>(If you are interested in me or want to cooperate  with me, please don't hesitate to contact me at <a href="mailto:fcxiong@zju.edu.cn">fcxiong@zju.edu.cn</a> or <a href="mailto:bearshng@gmail.com">bearshng@gmail.com</a></h3>
+<h3>(I am looking for internships If you are interested in me or want to cooperate  with me, please don't hesitate to contact me at <a href="mailto:fcxiong@zju.edu.cn">fcxiong@zju.edu.cn</a> or <a href="mailto:bearshng@gmail.com">bearshng@gmail.com</a></h3>
 
 ### Comments:
 

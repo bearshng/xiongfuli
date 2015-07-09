@@ -1,67 +1,44 @@
-# Configurations
-markdown: kramdown
-markdown_ext:  markdown,mkdown,mkdn,mkd,md
+# Site settings
+title: "Jekyll template"
+url: "http://www.xiongfuli.com"
 highlighter: pygments
+paginate: 5
+author:
+    name: Havee
+    github: Ihavee
+    email:
+    gitcafe: Havee
+    twitter:
+    facebook:
+    googleplus:
+    weibo:
+atom_path: /atom.xml
+rss_path: /rss.xml
 
-# Permalinks
-permalink:        /blog/:year/:month/:day/:title
+# Build settings
+markdown: redcarpet
+redcarpet:
+    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+permalink: /:categories/:year-:month/:title.html
 
-# Setup
-title:            'Welcome to my homepage'
-tagline:          'A Metro theme for Jekyll'
-description:      'A Sample blog using Jekyll Metro'
-url:              'http://www.xiongfuli.com'
-baseurl:          ''
+assets_path: /assets
+sass:
+    sass_dir: assets/_sass
+    style: :compressed
 
-# Navigation
-navigation:
-- text: About
-  url: /about/
-- text: Resume
-  url: /resume/cv.pdf
-- text: Blog
-  url: /blog/
-- text: Tags
-  url: /tags/
-- text: Archive
-  url : /archive/
-- text: Search
-  url: /search/
-# Author Details
-author:         'Fengchao Xiong'
-linkedin:       'http://cn.linkedin.com/in/fengchaoXiong'
-twitter:        'https://twitter.com/FengChaoXiong'
-facebook:       'https://www.facebook.com/fengchao.xiong'
-gplus:          'https://plus.google.com/u/0/+FengchaoXiong'
+# comment
+comments:
+    duoshuo:
+        name:                               # short name
+        rcomments:
+            num: 10
+            avatar: 0
+            time: 0
+            title: 0
+            admin: 0
+            length: 26
+# 网站统计
+analytics:
+    baidu:
+        siteid:                             # 百度统计 js 代码后的字符串
 
-# Google Analytics
-gahandler: 'UA-52149651-1'
-
-#if footer-links-visible is 'true' the svg-icons will be shown top on the copy right. 
-#else the svg icons will not exist
-footersvg: 'true'
-
-footer-links:
-  dribbble: 
-  email: bearshng@gmail.com
-  facebook: https://www.facebook.com/fengchao.xiong
-  flickr: 
-  github: bearshng
-  instagram: 
-  linkedin: http://cn.linkedin.com/in/fengchaoXiong
-  pinterest: 
-  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  google: https://plus.google.com/u/0/+FengchaoXiong
-  twitter: https://twitter.com/FengChaoXiong
-  stackoverflow: #users/4388898/peter-zhu # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-
-# Disqus
-disqushandler: 'bearshng'
-
-# Blog Configurations
-paginate: 10 # Posts per page on the blog index
-paginate_path: '/blog/page:num'
-destination: ./_site
-
-# Custom vars
-version:          0.7.10

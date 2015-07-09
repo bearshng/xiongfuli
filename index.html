@@ -1,117 +1,43 @@
 ---
-layout: master
-title: Home
-description: Home Page for Fengchao Xiong
+layout: default
 ---
+<div class="col-md-9">
+  {% for post in paginator.posts %}
+  <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  {% if post.content contains "<!-- more -->" %}
+  {{ post.content | split:'<!-- more -->' | first }}
+  {% else %}
+  {{ post.content | strip_html | truncate:50 }}
+  {% endif %}
+  {% endfor %}
 
-<div class="container">
-
-	<header class="row">
-	  <div class="col-sm-6 col-md-12" style="margin-top:25px;margin-bottom:25px">
-	    <h1 id="pin">{{site.title}}</h1>
-	  </div>
-	</header>
-	<nav>
-		<div class="row" style="margin-top:25px">
- 			<div class="col-md-4 col-sm-6 col-xs-12">
-				<a href="about/">
-					<div class="tile purple profile bord">
-						<h2 class="title">About Me</h2>
-						<p>Hello World, I am Fengchao Xiong.</p>
-					</div>
-				</a>
-		    </div>
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="resume/cv.pdf" title="Resume" class="tile red bord icon-resume"></a>
-			</div>
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<div class="live-tile" data-mode="flip" data-delay="4000">
-					<div>
-						<a href="blog/" title="Blog" class="tile orange bord icon-blog"></a>
-					</div>
-					<div>
-						<a href="blog/" title="Blog" class="tile orange bord font-fix">
-						<p>Blog Section:</p>
-							<ol>
-								<li>Posts</li>
-								<li>News</li>
-							</ol>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-
-			<div class="col-md-4 col-sm-6 col-xs-12">
-				{% for post in site.posts offset:1 limit:1 %}
-				<a href="{{post.url}}">
-					<div class="tile green bord">
-						<h3 class="title">Recent Article</h3>
-						<h4 class="title">{{ post.title }}</h4>
-						<p> {{ post.content | strip_html | truncatewords: 10 }}</p>
-					</div>
-				</a>
-				{% endfor %}
-			</div>
-
-			<div class="col-md-4 col-sm-6 col-xs-12">
-				{% for post in site.posts limit:1 %}
-				<a href="{{post.url}}">
-					<div class="tile red bord">
-						<h3 class="title">Latest Article</h3>
-						<h4 class="title">{{ post.title }}</h4>
-						<p>Topic: {{ post.tags }}</p>
-					</div>
-				</a>
-				{% endfor %}
-			</div>
-
-			<div class="col-md-4 col-sm-6 col-xs-12">
-				{% for post in site.posts %}
-					{% if post.featured == true %}
-					<a href="{{post.url}}">
-						<div class="tile orange bord">
-							<h3 class="title">Featured Article</h3>
-							<h4 class="title">{{ post.title }}</h4>
-							<p> {{ post.content | strip_html | truncatewords: 10 }}</p>
-						</div>
-					</a>
-					{% break %}
-					{% endif %}
-				{% endfor %}
-			</div>
-		</div>
-
-		<div class="row" style="margin-bottom:25px">
-			<div data-delay="2000" data-mode="flip" class="live-tile flip ha fix-3">
-			<div class="col-md-2 col-sm-3 col-xs-6 flip-front ha" style="transform: rotateX(180deg); transition: all 500ms ease 0s;">
-				<a class="tile blue bord lk-ico" href="https://www.linkedin.com/profile/view?id=224684037&trk=nav_responsive_tab_profile_pic"></a>
-			</div>
-
-			<div class="col-md-2 col-sm-3 col-xs-6 flip-back ha" style="transform: rotateX(360deg); transition: all 500ms ease 0s;">
-				<a class="tile blue bord tw-ico" href="https://twitter.com/FengChaoXiong"></a>
-			</div>
-		</div>
-
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="{{site.twitter}}"  class="tile blue bord tw-ico"></a>
-			</div>
-
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="{{site.facebook}}" class="tile blue bord fk-ico"></a>
-			</div>
-
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="feed.xml" class="tile purple bord rs-ico"></a>
-			</div>
-
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="{{site.gplus}}" class="tile orange bord gl-ico"></a>
-			</div>
-
-			
-		</div>
-	</nav>
+  <!-- Pagination links -->
+  <div class="pull-right">
+    {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <a class="btn btn-primary btn-sm" href="/">Home</a>
+    <a class="btn btn-primary btn-sm" href="/">&laquo; Prev</a>
+    {% else %}
+    <a class="btn btn-primary btn-sm" href="/">Home</a>
+    <a class="btn btn-primary btn-sm" href="/page{{paginator.previous_page}}/">&laquo; Prev</a>
+    {% endif %}
+    {% else %}
+    <span><a class="btn btn-primary btn-sm disabled" href="/">Home</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">&laquo; Prev</a></span>
+    {% endif %}
+    <span><a class="btn btn-primary btn-sm disabled">Page: {{paginator.page}} of {{paginator.total_pages}}</a></span>
+    {% if paginator.next_page %}
+    <a class="btn btn-primary btn-sm" href="/page{{paginator.next_page}}/">Next &raquo;</a>
+    <a class="btn btn-primary btn-sm" href="/page{{paginator.total_pages}}/">Last</a>
+    {% else if paginator.page == paginator.total_pages %}
+    <span><a class="btn btn-primary btn-sm disabled">Next &raquo;</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">Last</a></span>
+    {% endif %}
+  </div>
 </div>
+<aside class="col-md-3 visible-lg visible-md">
+  {% include categories.html %}
+  {% include recently_posts.html %}
+  {% include recently_comments.html %}
+  {% include blogroll.html %}
+</aside>

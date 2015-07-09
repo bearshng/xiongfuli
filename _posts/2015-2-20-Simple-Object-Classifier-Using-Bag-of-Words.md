@@ -2,7 +2,7 @@
 layout: post
 title:  Simple Object Classifier Using Bag of Words
 date:   2015-2-20 16:09:58
-categories: Pattern-Recongnition
+categories: PatternRecongnition
 tags: BOW SVM SURF
 ---
 I want to build a object classifier ,for my final project in [Computer Vison](http://www.cs.zju.edu.cn/~gpan/course/cv2014g "Computer Vison") Course.As the document says ,this project has following requirements.

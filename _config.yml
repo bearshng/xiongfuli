@@ -1,10 +1,11 @@
 # Site settings
-title: "Jekyll template"
+title: "Home"
 url: "http://www.xiongfuli.com"
 highlighter: pygments
 paginate: 5
+
 author:
-    name: Havee
+    name: Fuli
     github: Ihavee
     email:
     gitcafe: Havee
@@ -29,7 +30,7 @@ sass:
 # comment
 comments:
     duoshuo:
-        name:                               # short name
+        name: bearshng                              # short name
         rcomments:
             num: 10
             avatar: 0

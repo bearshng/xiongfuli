@@ -87,5 +87,44 @@ RubygemsRubygems是类似Radhat的RPM、centOS的Yum、Ubuntu的apt-get的应用
 
 这样就完成了整个本地环境的配置过程。
 
+##增加$LATEX$支持##
+
+在写博客的时候难免要输入一些数学的公式，而直接以图片形式显示公式往往很麻烦，对于后期的更新也不好，故而一般博客上面都增加了对$latex$的支持。在博客中增加这种支持也很简单，主要步骤如下。
+
+1. 在asset文件夹下面的js文件中增加[MathJax.js](/asset/js/MathJax.js "MathJax.js")文件
+2. 在_includes文件夹下面的head.html中增加如下代码。
+			<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+		    tex2jax: {
+		      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		      processEscapes: true
+		    }
+		  });
+		</script>
+		
+		<script type="text/x-mathjax-config">
+		    MathJax.Hub.Config({
+		      tex2jax: {
+		        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		      }
+		    });
+		</script>
+		
+		<script type="text/x-mathjax-config">
+		    MathJax.Hub.Queue(function() {
+		        var all = MathJax.Hub.getAllJax(), i;
+		        for(i=0; i < all.length; i += 1) {
+		            all[i].SourceElement().parentNode.className += ' has-jax';
+		        }
+		    });
+		</script>
+		
+		   <!--<script src="/assets/js/MathJax.js"></script>-->
+		<script type="text/javascript"
+		   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+这样就完成了对latex的配置过程，其实貌似第一步不需要。囧囧囧囧囧，只需要第二步即可。
+
 
 

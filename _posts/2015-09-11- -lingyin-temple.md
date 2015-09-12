@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  灵隐寺禅修观感
+title:  灵隐寺2015“禅行天下”修学营观感
 date:   2015-09-11 16:08
 categories: life
 tags: [佛教]

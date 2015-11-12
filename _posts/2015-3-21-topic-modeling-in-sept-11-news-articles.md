@@ -2,7 +2,7 @@
 layout: post
 title:  TOPIC MODELING IN 9/11 NEWS ARTICLES
 date:   2015-3-21 14:53
-categories: Machine Learning
+categories: 机器学习
 tags: NMF Visualization
 ---
 

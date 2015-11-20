@@ -42,11 +42,11 @@ tags: [句法模式识别]
 
 说了这么多，我们来举个例子，比如说下面这个
 
-<img src="/assets/img/201511/cfg.png" style="width:500px;vertical-align:middle;"alt="形式语言"  />
+<img src="/assets/img/201511/CFG.png" style="width:500px;vertical-align:middle;"alt="形式语言"  />
 
 这个是一个自然语言处理的例子，根据这个形式化的语言系统我们可以很容易地通过下面的过程来构造the man sleeps 的句子。
-<img src="/assets/img/201511/cfg1.png" style="width:500px;vertical-align:middle;"alt="形式语言"  />
-<img src="/assets/img/201511/cfg2.png" style="width:500px;vertical-align:middle;"alt="形式语言"  />
+<img src="/assets/img/201511/CFG1.png" style="width:500px;vertical-align:middle;"alt="形式语言"  />
+<img src="/assets/img/201511/CFG2.png" style="width:500px;vertical-align:middle;"alt="形式语言"  />
 
 形式语言理论可以追溯到五十年代中期乔姆斯基关于文法数学模型的研究。按照乔姆斯基的定义，文法可以分为正则文法、上下文无关文法、上下文有关文法和无约束文法四种类型。需要说明的是，句法模式识别的基本途径是把模式分解成子模式或基元。如果把每个基元解释为某种文法承认的符号，文法则是一个能生成由给定符号组成句子的句法规则的集合，根据文法规则，我们可以对。
 

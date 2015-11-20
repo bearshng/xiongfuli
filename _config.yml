@@ -1,8 +1,8 @@
 # Site settings
 title: "Home"
 url: "http://www.xiongfuli.com"
-highlighter: pygments
-paginate: 5
+highlighter: true
+paginate: 10
 
 author:
     name: Fuli

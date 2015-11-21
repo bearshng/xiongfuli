@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>在线文档编辑软件</title>
+	<!--作者：王若希，刘琦  -->
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+    <script type="text/javascript" src="js/editor.js"></script>
+    <link type="text/css" href="css/edit_icons.css" rel="Stylesheet" media="screen" />
+    <link type="text/css" href="css/main.css" rel="Stylesheet" media="screen" />
+</head>
+<body>
+
+    <div class="top_div">
+        <div class="edit_toolbar">
+            <ul id="cmdItem">
+                <!--<li><a id="undo" href="#" title="撤消"></a></li>
+                <li><a id="redo" href="#" title="重复"></a></li>-->
+                <li><a id="b" href="#" title="加粗"></a></li>
+                <li><a id="i" href="#" title="倾斜"></a></li>
+                <li><a id="u" href="#" title="下划线"></a></li>
+                <li><a id="superscript" href="#" title="上标"></a></li>
+                <li><a id="suffix" href="#" title="下标"></a></li>
+                <li><a id="ol" href="#" title="编号"></a></li>
+                <li><a id="ul" href="#" title="项目符号"></a></li>
+                <li><a id="algLf" href="#" title="文本左对齐"></a></li>
+                <li><a id="algCn" href="#" title="居中"></a></li>
+                <li><a id="algRg" href="#" title="文本右对齐"></a></li>
+                <li><a id="addIndtat" href="#" title="增加缩进量"></a></li>
+                <li><a id="reduceIndtat" href="#" title="减少缩进量"></a></li>
+                <li><a id="link" href="#" title="插入超链接"></a></li>
+                <!--<li><a id="img" href="#" title="插入图片"></a></li>-->
+                <li><a id="tb" href="#" title="表格"></a></li>
+                <li><a id="fontColor" href="#" title="字体颜色"></a></li>
+                <li><a id="bgColor" href="#" title="以不同颜色突出显示文本"></a></li>
+                <li>
+                    <select id="fS" title="字号" class="select">
+                        <option value=""></option>
+                        <option value="8" selected="selected">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="24">24</option>
+                        <option value="26">26</option>
+                        <option value="28">28</option>
+                        <option value="36">36</option>
+                        <option value="48">48</option>
+                        <option value="72">72</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="fF" title="字体" class="select">
+                        <option value=""></option>
+                        <option value="宋体" selected="selected">宋体</option>
+                        <option value="幼圆">幼圆</option>
+                        <option value="Arial">Arial</option>
+						<option value="楷体" selected="selected">楷体</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="隶书">隶书</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="edit_div" id="edit_box" contentEditable="false">
+    </div>
+    <div id="linkDiv" style="display: none;">
+        链接地址<br />
+        <input type="text" id="linkAddress" value="http://" class="input" /><br />
+        <br />
+        显示的文本<br />
+        <input type="text" id="linkText" class="input" /><br />
+        <br />
+        <input type="button" value="插入" onclick="sureLink()" />&nbsp;&nbsp;<input type="button"
+            value="取消" onclick="linkDialog('none', 'none')" />
+        <span id='tip' style="color: Red"></span>
+    </div>
+    <div id="tableDiv" style="display: none;">
+        <div>
+            行数&nbsp;&nbsp;<select id="rs">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp; 列数&nbsp;&nbsp;<select id="cs">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br />
+            <br />
+            <input type="button" value="确定" onclick="sureTable()" />&nbsp;&nbsp;<input type="button"
+                value="取消" onclick="tableDialog('none', 'none')" />
+        </div>
+    </div>
+    <div id="fcSel" class="colorSel">
+        <a href="#" id="fcBck" title="黑色" style="background-color:Black;"></a><a href="#"
+            id="fcRed" title="红色" style="background-color:red;"></a><a href="#" id="fcBle" title="蓝色"
+                style="background-color:blue;"></a><a href="#" id="fcGre" title="绿色" style="background-color:green;">
+                </a><a href="#" id="fcYel" title="黄色" style="background-color:yellow;">
+        </a><a href="#" id="fcGry" title="灰色" style="background-color:gray;"></a><a href="#"
+            id="fcPpl" title="紫色" style="background-color:purple;"></a><a href="#" id="fcOve"
+                title="橄榄色" style="background-color:Olive;"></a><a href="#" id="fcSlr" title="银灰色"
+                    style="background-color:Silver;"></a>
+    </div>
+    <div id="bcSel" class="colorSel">
+        <a href="#" id="bcBck" title="黑色" style="background-color:black;"></a><a href="#"
+            id="bcRed" title="红色" style="background-color:red;"></a><a href="#" id="bcBle" title="蓝色"
+                style="background-color:blue;"></a><a href="#" id="bcGre" title="绿色" style="background-color:green;">
+                </a><a href="#" id="bcYel" title="黄色" style="background-color:yellow;">
+        </a><a href="#" id="bcGry" title="灰色" style="background-color:gray;"></a><a href="#"
+            id="bcPpl" title="紫色" style="background-color:purple;"></a><a href="#" id="bcOve"
+                title="橄榄色" style="background-color:Olive;"></a><a href="#" id="bcSlr" title="银灰色"
+                    style="background-color:Silver;"></a><a href="#" id="bcWht" title="白色" style="background-color:White;">
+                    </a>
+    </div>
+</body>
+</html>

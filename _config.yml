@@ -1,7 +1,7 @@
 # Site settings
-title: "Home"
+title: "首页"
 url: "http://www.xiongfuli.com"
-highlighter: true
+highlighter: pygments
 paginate: 10
 
 author:

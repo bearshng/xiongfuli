@@ -1,0 +1,120 @@
+﻿/*作者：王若希*/
+
+.edit_div p
+{
+	margin:0;
+}
+
+#undo
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:2px 1px;
+}
+
+#redo
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-22px 1px;
+}
+
+#b
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-46px 1px;
+}
+
+#i
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-70px 1px;
+}
+
+#u
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-94px 1px;
+}
+
+#superscript
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-118px 1px;
+}
+
+#suffix
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-142px 1px;
+}
+
+#ol
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-166px 1px;
+}
+
+#ul
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-190px 1px;
+}
+
+#algLf
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-214px 1px;
+}
+
+#algCn
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-238px 1px;
+}
+
+#algRg
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-262px 1px;
+}
+
+#addIndtat
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-286px 1px;
+}
+
+#reduceIndtat
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-310px 1px;
+}
+
+#link
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-334px 1px;
+}
+
+#img
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-358px 1px;
+}
+
+#tb
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-381px 1px;
+}
+
+#fontColor
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-406px 1px;
+}
+
+#bgColor
+{
+	background-image:url(../icons/edit_icon.png);
+	background-position:-429px 1px;
+}

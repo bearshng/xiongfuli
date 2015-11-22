@@ -20,7 +20,7 @@
 }
 
 body {
-  font-size: $font-size;
+  font-size: $font-size * 1.25;
   line-height: $line-height * 1.6;
   color: lighten($base08, 10%);
   background: darken($base07, 10%);
@@ -40,12 +40,12 @@ a {
 
 h1 {
   font-size: $font-size * 2;
-  color: $base01;
+  color: #14CA1B;
 }
 
 h2 {
   font-size: $font-size * 1.75;
-  color: #333;
+  color: rgba(20, 202, 133, 0.79);
 }
 
 h3 {
@@ -306,10 +306,11 @@ table {
 
 img {
   display: inherit;
-  max-width: 85%;
+  max-width: 80%;
   margin: 0 auto;
   line-height: $line-height*1.4;
   box-shadow: 0 0 1px $base07, 0 0 6px rgba($base08, $alpha * 3);
+  
 }
 
 .img-wrap {

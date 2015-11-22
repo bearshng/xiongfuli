@@ -4,7 +4,7 @@ layout: default
 <div class="col-md-12">
   <h2 class="title"> {{ page.title }} <time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
   <div id="code" class="qrcode visible-lg"></div>
-  {{ content }}
+  {{ content}}
   <ul class="pager">
     {% if page.previous %}
     <li class="previous"><a  href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
@@ -17,6 +17,7 @@ layout: default
     <li class="next disabled"><a href="#">Next &rarr;</a></li>
     {% endif %}
   </ul>
+
 <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32">
 	<a class="jiathis_button_qzone"></a>
@@ -27,6 +28,7 @@ layout: default
 	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	<a class="jiathis_counter_style"></a>
 </div>
+
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
 <!-- JiaThis Button END -->
 {% include comments.html %}

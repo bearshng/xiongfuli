@@ -3,7 +3,7 @@ layout: post
 title:  Fedora下配置NFS服务器
 date:   2015-11-23 21:23
 categories: Linux
-tags: [Linux]
+tags: [NFS]
 ---
 
 这篇博客是我在2013年参加学院的IBM暑期实训的时候写的，之前是发在CSDN上面的，最近心想还是搬过来吧。主要目的是为了实现KVM的虚拟化的文件共享好像，管它呢，先copy过来再说吧。

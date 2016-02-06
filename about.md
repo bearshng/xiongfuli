@@ -122,9 +122,9 @@ $('#img-11').css({top:"100px", opacity:"0"})
 <div class='wrap1' id="wrap-1">
 <div class="box">
 <img id="img-1" src="/assets/img/about/macbook.png" alt=""/>
-<a href="www.whu.edu.cn"><img id="img-2" src="/assets/img/about/whu.png" alt=""/></a>
-<a href="www.zju.edu.cn"><img id="img-3" src="/assets/img/about/zju.jpg" alt=""/></a>
-<a href="www.sdu.edu.cn"><img id="img-4" src="/assets/img/about/sdu.jpg" alt=""/></a>
+<a href="http://www.whu.edu.cn"><img id="img-2" src="/assets/img/about/whu.png" alt=""/></a>
+<a href="http://www.zju.edu.cn"><img id="img-3" src="/assets/img/about/zju.jpg" alt=""/></a>
+<a href="http://www.sdu.edu.cn"><img id="img-4" src="/assets/img/about/sdu.jpg" alt=""/></a>
 <img id="img-5" src="/assets/img/about/keyboard.png" alt=""/>
 </div>
 </div>

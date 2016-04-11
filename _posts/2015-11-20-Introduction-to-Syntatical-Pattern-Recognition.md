@@ -42,11 +42,11 @@ tags: [句法模式识别]
 
 说了这么多，我们来举个例子，比如说下面这个
 
-<img src="/assets/img/201511/CFG.png" style="width:500px;vertical-align:middle;"alt="形式语言"  />
+<img src="/assets/img/201511/CFG.png" class ="myimage"alt="形式语言"  />
 
 这个是一个自然语言处理的例子，根据这个形式化的语言系统我们可以很容易地通过下面的过程来构造the man sleeps 的句子。
-<img src="/assets/img/201511/CFG1.png" style="width:500px;vertical-align:middle;"alt="形式语言"  />
-<img src="/assets/img/201511/CFG2.png" style="width:500px;vertical-align:middle;"alt="形式语言"  />
+<img src="/assets/img/201511/CFG1.png" class ="myimage"alt="形式语言"  />
+<img src="/assets/img/201511/CFG2.png" class ="myimage"alt="形式语言"  />
 
 形式语言理论可以追溯到五十年代中期乔姆斯基关于文法数学模型的研究。按照乔姆斯基的定义，文法可以分为正则文法、上下文无关文法、上下文有关文法和无约束文法四种类型。需要说明的是，句法模式识别的基本途径是把模式分解成子模式或基元。如果把每个基元解释为某种文法承认的符号，文法则是一个能生成由给定符号组成句子的句法规则的集合，根据文法规则，我们可以对。
 
@@ -60,7 +60,7 @@ tags: [句法模式识别]
 
 自动机常常用作序列检测器即对于输入的序列，输出其是accept还是reject，我们称这种自动机为接受器和识别器（也叫做序列检测器）。它产生一个二元输出，说要么“是”要么“否”来回答输入是否被机器接受。所有自动机的状态被称为要么接受要么不接受。在所有输入都被处理了的时候，如果当前状态是接受状态，输入被接受，否则被拒绝。作为规则，输入是符号（字符）；动作不使用。下图中的例子展示了接受单词"nice"的有限状态自动机，在这个FSM中唯一的接受状态是状态7。
 
-<img src="/assets/img/201511/nice.png" style="width:500px;vertical-align:middle;"alt="nice"  />
+<img src="/assets/img/201511/nice.png" class ="myimage"alt="nice"  />
 
 从自动机用做接收器角度来讲我们可以把形式化的语言和自动机进行对应.正则文法对应有限自动机（DAF或NFA），上下文无关文法（CFG, Context Free Grammar）对应下推自动机（有限自动机的扩展）。有限自动机只对终结符做状态转移，而下推机，可以对非终结符做状态转移。
 

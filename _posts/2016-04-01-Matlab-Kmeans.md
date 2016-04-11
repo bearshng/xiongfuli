@@ -2,7 +2,7 @@
 layout: post
 title:  Matlab K-means 异常解决方案
 date:   2016-04-01 16:36
-categories: 机器学习
+categories: ML
 tags: K-means
 ---
 
@@ -26,7 +26,9 @@ tags: K-means
 
 这个Error表示我的K-menas有两个聚类中心跑到同一个点了，导致在计算其中一个簇的中心和簇的中心到其它点的距离的时候出错。我用`doc kmeans` 命令得到下面的解决方案：
 
-<img src="/assets/img/201604/kmeans.png" style="width:500px;vertical-align:middle;"alt="Nexus基本配置"  />
+![Alt text](/assets/img/201604/kmeans.png "Nexus基本配置")
+
+<img src="/assets/img/201604/kmeans.png" class ="myimage"alt="Nexus基本配置"  />
 
 也就是说我们可以对Kmeans算法的进行参数设置，其中`emptyaction` 参数可以设置为三种方式：
 

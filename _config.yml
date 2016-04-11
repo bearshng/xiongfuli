@@ -1,7 +1,6 @@
 # Site settings
 title: "首页"
 url: "http://www.xiongfuli.com"
-highlighter: true
 paginate: 10
 
 author:
@@ -17,16 +16,15 @@ atom_path: /atom.xml
 rss_path: /rss.xml
 
 # Build settings
-markdown: kramdown 
-redcarpet:
-    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+kramdown:
+    input: GFM
 permalink: /:categories/:year-:month/:title.html
-
+gems: [jekyll-paginate]
+exclude: [Gemfile, Gemfile.lock, qrsync, Rakefile]
 assets_path: /assets
 sass:
     sass_dir: assets/_sass
     style: :compressed
-
 # comment
 comments:
     duoshuo:
@@ -42,4 +40,10 @@ comments:
 analytics:
     baidu:
         siteid: 6da593142b14f78c0c00d3ff4964f8c7                            # 百度统计 js 代码后的字符串
-
+webmaster:
+    baidu:
+        verify:
+    google:
+        verify:
+    bing:
+        verify:

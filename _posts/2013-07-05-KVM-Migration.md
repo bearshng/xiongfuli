@@ -30,7 +30,7 @@ V2V 虚拟机的迁移是指在 VMM（Virtual Machine Monitor）上运行的虚�
 目前主流的动态迁移工具，VMware 的 VMotion，Citrix 的 XenMotion，他们都依赖于物理机之间采用 SAN（storage area network）或 NAS（network-attached storage）之类的集中式共享外存设备，因而在迁移时只需要进行虚拟机系统内存执行状态的迁移，从而获得较好的迁移性能。
 
 
-<img src="/assets/img/201307/001.jpg" class ="myimage"alt="图 1. 共享存储的动态迁移示意图"  />
+<img src="/assets/img/201307/001.jpg"    class ="myimage"   alt="图 1. 共享存储的动态迁移示意图"  />
 图 1. 共享存储的动态迁移示意图
 
 如图 1 中所示的动态迁移，为了缩短迁移时间和服务中断时间，源主机和目的主机共享了 SAN 存储。这样，动态迁移只需要考虑虚拟机系统内存执行状态的迁移，从而获得较好的性能。
@@ -42,7 +42,7 @@ V2V 虚拟机的迁移是指在 VMM（Virtual Machine Monitor）上运行的虚�
 比如某些服务器没有使用 SAN 存储，而且迁移的频率很小，虚拟机上的服务对迁移时间的要求不严格，则可以使用存储块动态迁移技术；另一方面，SAN 存储的价格比较高，尽管 SAN 存储能够提高迁移性能和系统的稳定性，对于中小企业仅仅为了加快迁移速度而配置昂贵的 SAN 存储，性价比不高。
 在集中式共享外部存储的环境下，基于共享存储的动态迁移技术无疑能够工作得很好。但是，考虑到目前一些计算机集群并没有采用共享式外存，而是各自独立拥有本地外存的物理主机构成。基于共享存储的迁移技术在这种场合下受到限制，虚拟机迁移到目的主机后，不能访问其原有的外存设备，或者需要源主机为其外存访问提供支持。
 为了拓宽动态迁移技术的应用范围，有必要实现一个包括虚拟机外存迁移在内的全系统动态迁移方案。使得在采用分散式本地存储的计算机集群环境下，仍然能够利用迁移技术转移虚拟机环境，并且保证迁移过程中虚拟机系统服务的可用性。
-<img src="/assets/img/201307/001.jpg" class ="myimage"alt="图 2. 本地存储的动态迁移示意图"  />
+<img src="/assets/img/201307/001.jpg"    class ="myimage"   alt="图 2. 本地存储的动态迁移示意图"  />
 
 图 2. 本地存储的动态迁移示意图
 
@@ -160,7 +160,7 @@ virt-manager 创建虚拟机：参考 virt-manager 帮助手册。
 ### 设置实验环境 ###
 
 动态迁移实际上是把虚拟机的配置封装在一个文件中，然后通过高速网络，把虚拟机配置和内存运行状态从一台物理机迅速传送到另外一台物理机上，期间虚拟机一直保持运行状态。现有技术条件下，大多虚拟机软件如 VMware、Hyper-V、Xen 进行动态迁移都需要共享存储的支持。典型的共享存储包括 NFS 和 SMB/CIFS 协议的网络文件系统，或者通过 iSCSI 连接到 SAN 网络。选用哪一种网络文件系统，需要根据具体情况而定。本文的实验采用了 NFS 文件系统作为源主机和目的主机之间的共享存储。
-<img src="/assets/img/201307/003.jpg" class ="myimage"alt="图 3. 共享存储的动态迁移实验配置图"  />
+<img src="/assets/img/201307/003.jpg"    class ="myimage"   alt="图 3. 共享存储的动态迁移实验配置图"  />
 
 
 确保网络连接正确，源主机、目的主机和 NFS 服务器之间可以互相访问。
@@ -192,7 +192,7 @@ virt-manager 是基于 libvirt 的图像化虚拟机管理软件，请注意不�
 首先在源主机和目的主机上添加共享存储。这里以源主机为例，目的主机做相同的配置。
 
 添加 NFS 存储池到源主机和目的主机的 vit-manager 中。点击 Edit menu->Host Details->Storage tab。
-<img src="/assets/img/201307/004.jpg" class ="myimage"alt="图 4. 存储池配置图"  />
+<img src="/assets/img/201307/004.jpg"    class ="myimage"   alt="图 4. 存储池配置图"  />
 
 
 添加一个新的存储池。点击左下角的“+”号，弹出一个新的窗口。输入以下参数：
@@ -201,7 +201,7 @@ Name：存储池的名字。
 
 Type：选择 netfs：Network Exported Directory。因为本文使用了 NFS 作为共享存储协议。
 
-<img src="/assets/img/201307/005.jpg" class ="myimage"alt="图 5. 添加共享存储池"  />
+<img src="/assets/img/201307/005.jpg"    class ="myimage"   alt="图 5. 添加共享存储池"  />
 
 图 5. 添加共享存储池
 
@@ -214,7 +214,7 @@ Type：选择 netfs：Network Exported Directory。因为本文使用了 NFS 作
 		Source Path：NFS 服务器上输出的共享目录。
 
 
-<img src="/assets/img/201307/006.jpg" class ="myimage"alt="图 6. 存储池设置"  />
+<img src="/assets/img/201307/006.jpg"    class ="myimage"   alt="图 6. 存储池设置"  />
 
 
 点击”Finish”后，共享存储添加成功。此时在物理机上查看 Linux 系统的文件系统列表，可以看到共享存储映射的目录。
@@ -223,7 +223,7 @@ Type：选择 netfs：Network Exported Directory。因为本文使用了 NFS 作
 选择共享存储池，点击”New Volume”创建新的存储卷。
 输入存储卷参数。本例为虚拟机创建了大小为 10G，格式为 qcow2 的存储卷。
 
-<img src="/assets/img/201307/007.jpg" class ="myimage"alt="图 7. 添加存储卷"  />
+<img src="/assets/img/201307/007.jpg"    class ="myimage"   alt="图 7. 添加存储卷"  />
 
 图 7. 添加存储卷
 
@@ -237,13 +237,13 @@ Type：选择 netfs：Network Exported Directory。因为本文使用了 NFS 作
 		Connection：选择连接方式 。本文选择 SSH 连接。
 		Hostname：输入将要连接的主机名或 IP 地址，这里填写目的主机名 victory4。
 
-<img src="/assets/img/201307/008.jpg" class ="myimage"alt="图 8. 添加远程 VMM 连接"  />
+<img src="/assets/img/201307/008.jpg"    class ="myimage"   alt="图 8. 添加远程 VMM 连接"  />
 
 
 
 点击 Connect，输入 SSH 连接的密码后，将显示源主机和目的主机上的虚拟机列表。
 
-<img src="/assets/img/201307/009.jpg" class ="myimage"alt="图 9. 管理远程 VMM"  />
+<img src="/assets/img/201307/009.jpg"    class ="myimage"   alt="图 9. 管理远程 VMM"  />
 
 
 图 9. 管理远程 VMM
@@ -259,13 +259,13 @@ Type：选择 netfs：Network Exported Directory。因为本文使用了 NFS 作
 		Address：填入目的主机的 IP 地址。
 		Port and Bandwith：指定连接目的主机的端口和传输带宽，本文中没有设定，使用默认设置。
 
-<img src="/assets/img/201307/010.jpg" class ="myimage"alt="图 10. 虚拟机迁移设置"  />
+<img src="/assets/img/201307/010.jpg"    class ="myimage"   alt="图 10. 虚拟机迁移设置"  />
 
 图 10. 虚拟机迁移设置
 
 点击“Migrate”和“Yes”开始动态迁移虚拟机。
 
-<img src="/assets/img/201307/011.jpg" class ="myimage"alt="图 11. 虚拟机迁移进度"  />
+<img src="/assets/img/201307/011.jpg"    class ="myimage"   alt="图 11. 虚拟机迁移进度"  />
 
 图 11. 虚拟机迁移进度
 
@@ -371,7 +371,7 @@ QEMU-KVM 提供了的“-incoming”参数在指定的端口监听迁移数据�
 
 回到源主机上，在等待迁移的虚拟机中开启一些实时服务以验证动态迁移不会中断服务的运行。本例中在虚拟机的终端窗口中用“top -d 1“命令开启 TOP 服务，每秒刷新一次系统进程的信息。
 
-<img src="/assets/img/201307/012.jpg" class ="myimage"alt="图 12. 等待迁移的虚拟机中开启 TOP 服务"  />
+<img src="/assets/img/201307/012.jpg"    class ="myimage"   alt="图 12. 等待迁移的虚拟机中开启 TOP 服务"  />
 
 图 12. 等待迁移的虚拟机中开启 TOP 服务
 

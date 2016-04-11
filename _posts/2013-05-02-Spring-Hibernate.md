@@ -15,7 +15,7 @@ tags: SSH
 ## 二 【结构及用到的jar包】 ##
 
  
-<img src="/assets/img/201306/1359359018_8012.png" class ="myimage"alt="结构及用到的jar包"  />
+<img src="/assets/img/201306/1359359018_8012.png"    class ="myimage"   alt="结构及用到的jar包"  />
 
 
 ## 三  【配置】 ##
@@ -24,7 +24,7 @@ tags: SSH
 1.web.xml
 
 
-<img src="/assets/img/201306/1359359625_2603.png" class ="myimage"alt="结构及用到的jar包"  />
+<img src="/assets/img/201306/1359359625_2603.png"    class ="myimage"   alt="结构及用到的jar包"  />
 
 
 
@@ -37,7 +37,7 @@ tags: SSH
 2.1.   applicationContext.xml
 
 
-<img src="/assets/img/201306/1359364281_7037.png" class ="myimage"alt="applicationContext.xml"  />
+<img src="/assets/img/201306/1359364281_7037.png"    class ="myimage"   alt="applicationContext.xml"  />
 
 数据库的用户名 密码 地址是配置在这个文件里的。datasource用了两种配置方式 `jdbc` 以及 `proxool`在这里引用下网上对连接池的评论目前常用的连接池有：C3P0、DBCP、Proxool 网上的评价是：C3P0比较耗费资源，效率方面可能要低一点。DBCP在实践中存在BUG，在某些种情会产生很多空连接不能释放，Hibernate3.0已经放弃了对其的支持。Proxool的负面评价较少，现在比较推荐它，而且它还提供即时监控连接池状态的功能，便于发现连接泄漏的情况。
 
@@ -47,13 +47,13 @@ tags: SSH
 3.Spring MVC 配置
 
 spring-servlet.xml
-<img src="/assets/img/201306/1359363923_8591.png" class ="myimage"alt="spring-servlet.xml"  />
+<img src="/assets/img/201306/1359363923_8591.png"    class ="myimage"   alt="spring-servlet.xml"  />
 
 
 3.1 Hibernate配置
 
 hibernate.cfg.xml
-<img src="/assets/img/201306/1359364665_5601.png" class ="myimage"alt="hibernate.cfg.xml"  />
+<img src="/assets/img/201306/1359364665_5601.png"    class ="myimage"   alt="hibernate.cfg.xml"  />
 
 
 可见在这个文件里已无数据库 用户名 密码 地址 的配置了
@@ -61,12 +61,12 @@ hibernate.cfg.xml
 ## 四 【Service层】 ##
 
 接口类IService
-<img src="/assets/img/201306/1359364858_6002.png" class ="myimage"alt="接口类IService"  />
+<img src="/assets/img/201306/1359364858_6002.png"    class ="myimage"   alt="接口类IService"  />
 
 
 接口实现类MyServiceImp.java
 
-<img src="/assets/img/201306/1359365333_8644.png" class ="myimage"alt="接口类IService"  />
+<img src="/assets/img/201306/1359365333_8644.png"    class ="myimage"   alt="接口类IService"  />
 
 
 主要的想法是用原生Sql而不是Hibernate sql，然后用Spring的事务管理去处理提交 回滚的操作
@@ -280,19 +280,19 @@ hibernate.cfg.xml
 
 列表界面 register.jsp
 
-<img src="/assets/img/201306/1359366502_5977.png" class ="myimage"alt="接口类IService"  />
+<img src="/assets/img/201306/1359366502_5977.png"    class ="myimage"   alt="接口类IService"  />
 
 
 编辑界面 userinfo.jsp
-<img src="/assets/img/201306/1359366758_3680.png" class ="myimage"alt="接口类IService"  />
+<img src="/assets/img/201306/1359366758_3680.png"    class ="myimage"   alt="接口类IService"  />
 
 
 这个页面是把User 作为一个json对象 整个传递给了后台。
-<img src="/assets/img/201306/1359366959_9166.png" class ="myimage"alt="接口类IService"  />
+<img src="/assets/img/201306/1359366959_9166.png"    class ="myimage"   alt="接口类IService"  />
 
 
 后台对json的接收
-<img src="/assets/img/201306/1359367058_5236.png" class ="myimage"alt="接口类IService"  />
+<img src="/assets/img/201306/1359367058_5236.png"    class ="myimage"   alt="接口类IService"  />
 
 
 ## 七 【问题及解决】 ##

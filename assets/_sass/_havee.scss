@@ -68,9 +68,15 @@ h6 {
   color: darken($base06, 30%);
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+.col-md-12 h1,.col-md-12  h2,.col-md-12  h3,.col-md-12  h4,.col-md-12  h5,.col-md-12  h6,.col-md-12 strong {
   line-height: $line-height * 1.8;
   @include text-shadow;
+}
+.col-md-12 h1,.col-md-12  h2,.col-md-12  h3,.col-md-12  h4,.col-md-12  h5,.col-md-12  h6,.col-md-12 strong {
+border-left: 10px solid;
+padding-left: 9px;
+background: rgb(240, 240, 240);
+padding: 0.5em;
 }
 
 hr {
@@ -354,4 +360,6 @@ img {
 .myimage{
 width:500px;
 vertical-align:middle;
+margin-top:10px;
+margin-bottom:10px;
 }

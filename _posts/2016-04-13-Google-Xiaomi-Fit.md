@@ -2,7 +2,7 @@
 layout: post
 title:  小米手环连接Google Fit方案
 date:   2016-04-13 16:36
-categories: ml
+categories: 杂
 tags: Google 小米
 ---
 

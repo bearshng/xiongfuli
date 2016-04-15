@@ -6,7 +6,6 @@ categories: 杂
 tags: Google 小米
 ---
 
-
  去年7月份买的小米手环，今年2月份买了nexus 5x，发现上面有Google fit 应用，但是使用需要打开google的位置记录，由于大陆的某些政策因此此项功能就不能使用了，所以google fit 就成了一个摆设了。前一段时间在[网上](http://tw.miui.com/thread-18521-1-1.html "网上")说小米手还可以绑定google fit ，可是我打开小米运动并没有发现连接google fit 的选项。
 <img src="/assets/img/201604/mifit2.jpg" class="myimage" alt="Nexus基本配置" />
 

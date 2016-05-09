@@ -106,11 +106,21 @@ $(window).scroll(function() {
 if($(document).scrollTop() > $("header").height() + $("#wrap-1").height()*3 && skill2 == 1){
 skill2 = 0;
 $('#img-10').css({top:"100px", opacity:"0"})
-.animate({top:"-=100px",opacity:"1"}, 2000);
+.animate({top:"-=100px",opacity:"1"}, 1400);
 $('#img-11').css({top:"100px", opacity:"0"})
+.animate({top:"-=100px",opacity:"1"}, 1600);
+
+$('#img-12').css({top:"100px", opacity:"0"})
+.animate({top:"-=100px",opacity:"1"}, 1800);
+$('#img-13').css({top:"100px", opacity:"0"})
 .animate({top:"-=100px",opacity:"1"}, 2000);
+$('#img-14').css({top:"100px", opacity:"0"})
+.animate({top:"-=100px",opacity:"1"}, 2200);
 }
 });
+
+
+
 </script>
 
 
@@ -141,18 +151,31 @@ $('#img-11').css({top:"100px", opacity:"0"})
 </div>
 </div>
 <hr />
-<div class="wrap1" id="skills">
-<p>Projects</p>
+
+<div class="wrap1" id="projects">
+<p>Misc</p>
 </div>
+
 <div class="wrap1">
 <div class="box">
 
 <a class="project" href="https://github.com/bearshng/code/tree/master/SDUDesignLatex">
-<img class="img-hidden" id="img-10" src="/assets/img/about/objectRecognition.jpg" style="width:200px;margin-right:40px" alt=""/>
+<img class="img-hidden" id="img-10" src="/assets/img/about/objectRecognition.jpg" style="width:150px;margin-right:40px" alt=""/>
 </a>
-<a class="project" href="https://github.com/bearshng/code/tree/master/object%20Recongnition"><img class="img-hidden" id="img-11" src="/assets/img/about/latex.jpg"  style="width:200px "  alt=""/></a>
+<a class="project" href="https://github.com/bearshng/code/tree/master/object%20Recongnition"><img class="img-hidden" id="img-11" src="/assets/img/about/latex.jpg"  style="width:150px "  alt=""/></a>
+
+<a class="project" href="/sduoe">
+<img class="img-hidden" id="img-12" src="/assets/img/about/sduoe.png"  style="width:150px" alt=""/>
+</a>
+<a class="project" href="/HappyNewYear">
+<img class="img-hidden" id="img-13" src="/assets/img/about/happyNewYear.png"   style="width:150px"  alt=""/></a>
+
+<a class="project" href="/presentation.html">
+<img class="img-hidden" id="img-14" src="/assets/img/about/presentation.png"   style="width:150px"  alt=""/></a>
 </div>
 </div>
+
+
 <div class="wrap1" id="more">
 <p>More?</p>
 </div>

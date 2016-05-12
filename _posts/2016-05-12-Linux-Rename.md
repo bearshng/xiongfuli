@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  Linux下批量修改文件名
@@ -6,9 +5,6 @@ date:   2016-05-12 16:36
 categories: Linux
 tags: Linux Rename
 ---
-
-
-
 最近半个月在疯狂地做一些实验，然后需要批量地对一些文件的名字进行修改，而手工操作极其繁琐，在[之前的博](http://www.xiongfuli.com/linux/2015-11/cygwin.html)文中我说到我用了Cygwin软件，今天就告诉大家如何在Cygwin下批量修改文件名。
 
 ## mv命令 ##

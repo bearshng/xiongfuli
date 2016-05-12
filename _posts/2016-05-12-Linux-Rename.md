@@ -8,7 +8,9 @@ tags: Linux Rename
 
   最近半个月在疯狂地做一些实验，然后需要批量地对一些文件的名字进行修改，而手工操作极其繁琐，在[之前的博](http://www.xiongfuli.com/linux/2015-11/cygwin.html)文中我说到我用了Cygwin软件，今天就告诉大家如何在Cygwin下批量修改文件名。
 
+
 ## mv命令 ##
+
 
 我们知道在Linux下面 `mv` 命令有两个功能一个是用于修改文件的名字，另外一个就是移动文件。它有下面几个命令参数：
 
@@ -24,6 +26,7 @@ tags: Linux Rename
 
 
 下面举几个例子用于`mv` 命令
+
 
 ### 修改文件名 ###
 
@@ -57,6 +60,7 @@ tags: Linux Rename
 我们发现文件名已经由`test.txt`变成`test2.txt`了。
 
 ### 移动文件 ###
+
 1.显示当前文件
 
 ```shell
@@ -100,6 +104,7 @@ tags: Linux Rename
 但是`mv`有一点就是不能批量修改文件，或者说是批量修改文件很麻烦，如果想批量修改文件的话我们可以使用`rename`命令
 
 ## rename命令 ##
+
 
 [rename命令](http://tips.webdesign10.com/how-to-bulk-rename-files-in-linux-in-the-terminal) 提供了批量修改文件的功能，尤其是对正则表达式的支持，比如说我可以把当前文件夹下面的所有`.avi`数据中的`走向共和`修改为`建党伟业` 如果我们采用`mv` 命令我们可能需要很多操作甚至用`shell` 脚本，但是用`rename`命令我们一句话就可以完成。
 

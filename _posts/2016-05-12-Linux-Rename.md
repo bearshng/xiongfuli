@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Linux下批量修改文件命令
-date:   2016-05-12 16:36
+title: Linux下批量修改文件命令
+date: 2016-05-12 16:36
 categories: Linux
 tags: Linux Rename
 ---

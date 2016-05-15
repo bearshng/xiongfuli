@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Apricity OS安装及使用体验
+title:  Linux批量修改文件名
 date:   2016-05-12 16:36
 categories: Linux
-tags: ApricityOS 搜狗
+tags: Linux Rename
 ---
 
 

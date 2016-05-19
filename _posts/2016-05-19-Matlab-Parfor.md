@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  在Matlab里面使用parfor实现多核平台并行计算
-date:   2016-05-19 16:36
+date:   2016-05-18 16:36
 categories: Linux
 tags: Linux Rename
 ---

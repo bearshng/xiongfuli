@@ -2,6 +2,8 @@
 layout: post
 title:  在Matlab里面使用parfor实现多核平台并行计算
 date:   2016-05-19 12:36
+categories: 并行计算
+tags: Matlab Parfor
 ---
 
 

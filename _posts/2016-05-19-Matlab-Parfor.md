@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Linux批量修改文件名
+title:  在Matlab下使用parfor实现多核并行计算
 date:   2016-05-18 16:36
-categories: Linux
-tags: Linux Rename
+categories: 杂
+tags: Matlab parfor
 ---
 
 

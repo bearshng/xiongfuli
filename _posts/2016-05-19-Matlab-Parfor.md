@@ -1,9 +1,7 @@
 ---
 layout: post
-title:  在Matlab Parfor循环里面保存数据文件
-date:   2016-05-19 16:36
-categories: ml
-tags: Matlab parfor parsave
+title:  在Matlab里面使用parfor实现多核平台并行计算
+date:   2016-05-19 12:36
 ---
 
 
@@ -13,7 +11,7 @@ tags: Matlab parfor parsave
 
 `parfor`就是`paralle+for`，也就是并行的`for`循环，它的大致意思是会给你自动构造几个`matlab`的执行进程，并行地处理你的数据。这里的数目最大的数值是你的CPU的核数，比如说楼主的电脑是四核的，在任务管理器里面就看到了4个matlab的进程。
 
-<img src="/assets/img/201604/parfor-Matlab.png" class="myimage" alt="Matlab进程" />
+<img src="/assets/img/201605/parfor-Matlab.png" class="myimage" alt="Matlab进程" />
 
 当你需要简单计算的多次循环迭代时，例如针对不同的参数对实验结果的影响等，`parfor`循环就很有用。`parfor`将循环迭代分组，那么每个worker执行迭代的一部分。当迭代耗时很长的时候`parfor`循环也是有用的，因为workers可以同时执行迭代，但是当你的CPU的利用率如果已经达到了100%，此时你这种并行是没有意义的，速度不会加快的。另外[这个博客](http://zhiqiang.org/blog/it/matlab-parfor-condition.html "这个博客")上指出了`Matlab`的`parfor`的使用条件即：
 
@@ -23,7 +21,7 @@ tags: Matlab parfor parsave
 
 ## parfor的使用 ##
 
-假如说函数`f`是一个非常耗时的函数，然后你想把矩阵`A`中的每一个元素传递到函数`f`中进行运算，运算结果保存在矩阵`B`里面，那么你可以这样操作。
+假如说函数$f$是一个非常耗时的函数，然后你想把矩阵$A$中的每一个元素传递到函数$f$中进行运算，运算结果保存在矩阵$B$里面，那么你可以这样操作。
 
 ```mtlab
 	parfor i = 1:length(A)

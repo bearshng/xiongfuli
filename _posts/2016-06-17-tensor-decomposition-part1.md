@@ -2,8 +2,8 @@
 layout: post
 title:  张量分解-张量介绍
 date:   2016-06-16 16:36
-categories: 机器学习
-tags: Tensor Matrix
+categories: 机器学习 
+tags: Tensor Matrix 
 ---
 
 

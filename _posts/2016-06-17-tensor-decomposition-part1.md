@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  在Matlab下使用parfor实现多核并行计算
-date:   2016-05-18 16:36
-categories: 并行计算
-tags: Matlab parfor
+title:  张量分解-张量介绍
+date:   2016-06-17 16:36
+categories: 机器学习
+tags: Tensor Matrix Vector
 ---
 
 

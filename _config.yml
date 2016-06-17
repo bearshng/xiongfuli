@@ -14,7 +14,7 @@ author:
     weibo:
 atom_path: /atom.xml
 rss_path: /rss.xml
-
+future: true
 # Build settings
 kramdown:
     input: GFM

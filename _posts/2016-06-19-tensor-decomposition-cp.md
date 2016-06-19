@@ -2,7 +2,7 @@
 layout: post
 title:  张量分解-CP分解
 date:   2016-06-19 10:23
-categories: ML
+categories: 机器学习 
 tags:  tensor matrix vector CP分解 
 ---
 

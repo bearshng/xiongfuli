@@ -25,17 +25,7 @@ assets_path: /assets
 sass:
     sass_dir: assets/_sass
     style: :compressed
-# comment
-comments:
-    duoshuo:
-        name: bearshng                              # short name
-        rcomments:
-            num: 10
-            avatar: 0
-            time: 0
-            title: 0
-            admin: 0
-            length: 26
+
 # 网站统计
 analytics:
     baidu:
@@ -47,6 +37,8 @@ webmaster:
         verify:
     bing:
         verify:
+comments: 
+        true;
 #prose.io settings
 prose:
   rooturl: "source"

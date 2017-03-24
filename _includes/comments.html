@@ -1,5 +1,10 @@
-{% if site.comments.duoshuo.name %}
-<div id="comments">
-  <div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
-</div>
-{% endif %}
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "95c161d6f83d47dcbe15b805b99b8b7e",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>

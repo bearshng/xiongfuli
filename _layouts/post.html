@@ -36,7 +36,6 @@ layout: default
 <script src="/assets/js/gitment.js"></script>
 <div id="gitment"></div>
 <!-- 主页不要加载gitment -->
-<% if (!index){ %>
 <script>
 const myTheme = {
   render(state, instance) {
@@ -62,7 +61,6 @@ var gitment = new Gitment({
 gitment.render('gitment')
 gitment.render('container')
 </script>
-<% } %>
 
 
 

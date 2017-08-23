@@ -32,18 +32,37 @@ layout: default
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
 <!-- JiaThis Button END -->
 
-<div id="cloud-tie-wrapper" class="cloud-tie-wrapper" style="margin-top: 50px"></div>
-<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<link rel="stylesheet" href="/assets/css/gitment.css"> 
+<script src="/assets/js/gitment.js"></script>
+<div id="gitment"></div>
+<!-- 主页不要加载gitment -->
+<% if (!index){ %>
 <script>
-var cloudTieConfig = {
-  url: document.location.href, 
-  sourceId: "",
-  productKey: "95c161d6f83d47dcbe15b805b99b8b7e",
-  target: "cloud-tie-wrapper"
-};
-var yunManualLoad = true;
-Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-
-
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'gitment-container gitment-root-container'
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    container.appendChild(instance.renderFooter(state, instance))
+    return container
+  },
+}
+var gitment = new Gitment({
+  owner: 'bearshng',
+  repo: 'web',
+  theme: myTheme,
+  oauth: {
+    client_id: '01a97878364a13fc4ceb',
+    client_secret: '75e4fde58e8a96b711b88b0d97a67e4a9b6f3c26',
+  },
+})
+gitment.render('gitment')
+gitment.render('container')
 </script>
+<% } %>
+
+
 

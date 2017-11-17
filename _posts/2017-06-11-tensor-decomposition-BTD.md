@@ -11,9 +11,16 @@ tags: tensor matrix block-term-decomposition(BTD)
 ## 从CP分解到BTD
 在CP分解中我们将一个张量分解为 K个Rank1的成员张量的形式，写成公式即为：
 \begin{equation}
-\mathcal{T}\sum \limits_{r = 1}^{K}a_r\circle b_r \circle c_r=\sum \limits_{r = 1}^{K} (a_rb_r^T)\circle c_r
+\mathcal{T}=\sum \limits_{r = 1}^{K}a_r\circ b_r \circ c_r=\sum \limits_{r = 1}^{K} (a_rb_r^T)\circ c_r
 \end{equation}
-显然$a_rb_r$是一个
+显然$a_rb_r^T$是一个Rank-1的矩阵，即一个低秩矩阵。而低秩往往是一些局部的特征，比如说人的一些眉毛一般都是低秩的。而在一些应用中，我们想得到一些不同秩的特征，或者是不同尺度的特征，比如说对于人脸，我想得到鼻子，眉毛，嘴巴，脸型等特征，这个时候CP分解就无法直观地做到了。
+
+基于CP分解，我们想，如果$a_rb_r^T$,它不是一个秩为1️的矩阵，而是一个秩为K的矩阵，那么显然$a_r$和$b_r$就不是一个向量了，而是一个秩为$L_r$的矩阵。于是就得到了BTD模型的一种形式即
+\begin{equation}
+\mathcal{T}=\sum \limits_{r = 1}^{K}A_rB_r^T\circ c_r
+\end{equation}
+ 
+可以将这个模型进一步进行推导即可得到BTD的通俗形式。
 ## BTD分解概览
 
 2008年Lieven De Lathauwer 等人提出了一种Block term decomposition（BTD），这种张量分解在一些论文中也被称为Block component decomposition (BCD)。我本人认为叫BCD 更合理一些，因为这种张量分解将一个N阶张量分解为R个成员张量的形式，BCD更符合。如下图就是一个$Rank-(L_r, M_r, N_r)$的分解，每一个成员张量是一个$Rank-(L_r, M_r, N_r)$的Tucker分解。

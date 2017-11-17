@@ -8,6 +8,12 @@ tags: tensor matrix block-term-decomposition(BTD)
 
 去年差不多这个时候，我在本人的博客上发表了三个关于张量分解的博客，从百度统计来看，很多人阅读了这三篇博文。今天，我再介绍一种张量分解-block term decomposition (BTD)，下面将分几个部分对BTD进行介绍。
 
+## 从CP分解到BTD
+在CP分解中我们将一个张量分解为 K个Rank1的成员张量的形式，写成公式即为：
+\begin{equation}
+\mathcal{T}\sum \limits_{r = 1}^{K}a_r\circle b_r \circle c_r=\sum \limits_{r = 1}^{K} (a_rb_r^T)\circle c_r
+\end{equation}
+显然$a_rb_r$是一个
 ## BTD分解概览
 
 2008年Lieven De Lathauwer 等人提出了一种Block term decomposition（BTD），这种张量分解在一些论文中也被称为Block component decomposition (BCD)。我本人认为叫BCD 更合理一些，因为这种张量分解将一个N阶张量分解为R个成员张量的形式，BCD更符合。如下图就是一个$Rank-(L_r, M_r, N_r)$的分解，每一个成员张量是一个$Rank-(L_r, M_r, N_r)$的Tucker分解。

@@ -147,7 +147,7 @@ Matlab默认是不允许在`parfor`里面使用`save`函数的,这个是[因为]
 这样就可以实现在并行环境下的save操作了。但是这样就不会`violate  workspace Transparency`了吗?个人感觉这个可能在以后的版本中同样会被封,先这样使用再说吧。
 
 
-###Matlab 2014版本下使用Parfor保存的变量为空###
+### Matlab 2014版本下使用Parfor保存的变量为空 ###
 
 朋友最近反应说在Ubuntu平台下的Matlab 2014版本上运行parfor 保存的变量居然为空。其实这个是一个matlab的bug。在StackOverflow(https://stackoverflow.com/questions/19981111/matlab-variables-empty-after-parfor-loop)上有相关
 的解决方案即：采用`matlab -nodisplay -nodesktop -r "scriptname"` 命令来运行matlab即可。

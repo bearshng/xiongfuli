@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Matlab实现深度学习
+title:  MatConvNet实现深度学习
 date: '2018-8-10 10:23'
 categories: 深度学习
 tags: Matlab 深度学习 MatConvNet

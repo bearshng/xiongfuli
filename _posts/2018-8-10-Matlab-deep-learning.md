@@ -260,8 +260,45 @@ info = cnn_train_dag(net, imdb, @(i,b) getBatch(bopts,i,b), opts.train, 'val', f
 myCNN = net.saveobj();                                                                                                      % Save the DagNN trained CNN
 save('myCNNdag.mat', '-struct', 'myCNN')  
 ```
-
 至此我们就完成了一个网络的训练过程。我们可以通过上面的AlexNet的测试步骤对输入的数据进行测试。
+
+## 使用AutoNN简化训练过程
+从前面的过程我们发现，训练一个自己的网络太麻烦了，要自己addLayer传太多的参数了。有人开始对MatConvNet进行封装，即AutoNN。 在AutoNN中，MatConvNet中一些基本的函数被重新定义，我们不需要指定各个层的名字和层的输入和输出，而且自动给网络的参数进行初始化(当然你也可以用Param原语对网络进行初始化)。另外，AutoNN也实现了一些经典网络ResNet等的架构。使用AutoNN，上面的网络训练代码可以改为：
+
+```
+	images = Input('images') ;
+labels = Input('labels') ;
+
+
+f=1/100;
+%block one
+x=vl_nnconv(images,'size',[5,5,1,32],'weightScale',f);
+x=vl_nnrelu(x);
+x=vl_nnpool(x,2,'method','max','stride',2);
+%block 2
+x=vl_nnpool(vl_nnrelu(vl_nnconv(x,'size',[5 5 32 32],'weightScale',f)),2,'method','max','stride',2);
+
+%block 3
+x=(vl_nnconv(x,'size',[4 4 32 64],'weightScale',f));% conv
+
+
+x=vl_nnrelu(vl_nnconv(x,'size',[1 1 64, 256],'weightScale',f));% fc+relu
+
+x=vl_nnconv(x,'size',[1 1 256 10]);
+output=vl_nnsoftmax(x);
+
+objective = vl_nnloss(output, labels, 'loss', 'log') ;
+error = vl_nnloss(output, labels, 'loss', 'classerror') ;
+Layer.workspaceNames() ;
+
+net = Net(objective, error) ;
+info = cnn_train_autonn(net, imdb, @(i,b) getBatch(bopts,i,b), opts.train, 'val', find(imdb.images.set == 3)) ;                % MatConvNet DagNN Training Function
+myCNN = net.saveobj();
+```
+是不是感觉代码简洁了好多了。
+
+## 最后的最后
+虽然MatConvNet 提供了一个用Matlab训练deep learning的方法，但是建议还是用Python的一些库如Pytorch来进行训练，因为这些网络的开源社区的人更多，出了问题也更容易查到解决方案。
 ## 参考文献
 
 1. http://www.vlfeat.org/matconvnet/

@@ -2,6 +2,10 @@ body {
 	line-height: 1.5;
 	margin: 2% 10% 2% 10%;
 	font-family: Georgia, Helvetica, Arial, Verdana, san-serif, Times;
+	background-color: #f0f0f0;
+	text-shadow: 0 1px 0 #fff;
+    font-weight: 300;
+    word-wrap: break-word; 
 }
 h1, h2, h3 {
     color: #527bbd;
@@ -12,6 +16,7 @@ h1, h2, h3 {
     padding-top: 0.5em;
     border-bottom: 1px solid #aaaaaa;
 }
+
 .header {
 	text-align: center;
 	font-size: 22px;
@@ -24,7 +29,7 @@ h1, h2, h3 {
 }
 
 .sectiontitle {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
 	margin-right: 0;
 }
@@ -33,6 +38,7 @@ h1, h2, h3 {
 	font-size: 16px;
 	font-weight: normal;
 	padding-top: 10px: 
+
 
 }
 

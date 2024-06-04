@@ -68,12 +68,11 @@ h6 {
   color: darken($base06, 30%);
 }
 
-.col-md-12 h1,.col-md-12  h2,.col-md-12  h3,.col-md-12  h4,.col-md-12  h5,.col-md-12  h6,.col-md-12 strong {
+.col-md-12 h1,.col-md-12  h2,.col-md-12  h3,.col-md-12  h4,.col-md-12  h5,.col-md-12  h6 {
   line-height: $line-height * 1.8;
   @include text-shadow;
 }
-.col-md-12 h1,.col-md-12  h2,.col-md-12  h3,.col-md-12  h4,.col-md-12  h5,.col-md-12  h6,.col-md-12 strong {
-border-left: 10px solid;
+.col-md-12 h1,.col-md-12  h2,.col-md-12  h3,.col-md-12  h4,.col-md-12  h5,.col-md-12  h6 {
 padding-left: 9px;
 background: rgb(240, 240, 240);
 padding: 0.5em;
